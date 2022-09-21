@@ -1,3 +1,5 @@
+[![Compile PDF](https://github.com/ifiptm/factsheet/actions/workflows/compile_pdf.yml/badge.svg)](https://github.com/ifiptm/factsheet/actions/workflows/compile_pdf.yml)
+
 # IFIP WG 11.11 Trust Management Factsheet
 
 This repository contains the factsheet of the Working Group. All the content of the factsheet should be written in a Github flavour Markdown while Pandoc is used to compile it to a deliverable PDF. The metadata about the report should be written in the `metadata.yml` file.

@@ -22,7 +22,7 @@ jobs:
           tlmgr install collectbox && \
           tlmgr install ucs && \
           mkdir -p output && \
-          pandoc --template=pandoc-templates/latex-template.tex --output=output/${{ github.event.inputs.filename }}.pdf ${{ github.event.inputs.filename }}.md
+          pandoc --template=pandoc-templates/latex-template.tex --metadata-file=metadata.yml --output=output/${{ github.event.inputs.filename }}.pdf ${{ github.event.inputs.filename }}.md
       - name: Upload output
         uses: actions/upload-artifact@v3
         with:

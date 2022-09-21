@@ -1,16 +1,16 @@
 # Metadata: see https://pandoc.org/MANUAL.html#metadata-variables and https://pandoc.org/MANUAL.html#option--metadata-file
 title: |
-       | Factsheet: 20yy
+       | Factsheet: 2022
        | WG 11.11 Trust Management
-author:
-  - Author 1
-  - Author 2
-  - Author 3
-  - Author 4
+# author:
+#   - Author 1
+#   - Author 2
+#   - Author 3
+#   - Author 4
 subject: Working Group Factsheet
 description: Factsheet of the IFIP Working Group 11.11 on Trust Management
-abstract: If an abstract is necessary at all. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nulla non dolor placerat condimentum. Sed mollis maximus scelerisque. Nam finibus velit ac metus aliquam, eget volutpat risus hendrerit. Maecenas nunc nulla, aliquam ac tincidunt non, finibus et augue.
-date: 20XX-Jun-1
+# abstract: If an abstract is necessary at all. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nulla non dolor placerat condimentum. Sed mollis maximus scelerisque. Nam finibus velit ac metus aliquam, eget volutpat risus hendrerit. Maecenas nunc nulla, aliquam ac tincidunt non, finibus et augue.
+# date: 20XX-Jun-1
 lang: en-GB
 # LaTeX-specific configuration
 geometry:

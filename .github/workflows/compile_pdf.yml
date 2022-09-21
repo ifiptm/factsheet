@@ -1,0 +1,30 @@
+name: Compile PDF
+
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        type: string
+        default: 'example'
+        description: The name of the input Markdown file to process, relative to the root of the repository, without the extension. (The output PDF will have the same name.)
+        required: true
+jobs:
+  compile_pdf:
+    runs-on: ubuntu-latest
+    container:
+      image: pandoc/latex:latest
+    steps:
+      - name: Copy content from repository
+        uses: actions/checkout@v3
+      - name: Compile PDF
+        run: |
+          tlmgr install adjustbox && \
+          tlmgr install collectbox && \
+          tlmgr install ucs && \
+          mkdir -p output && \
+          pandoc --template=pandoc-templates/latex-template.tex --output=output/${{ github.event.inputs.filename }}.pdf ${{ github.event.inputs.filename }}.md
+      - name: Upload output
+        uses: actions/upload-artifact@v3
+        with:
+          name: output_pdf
+          path: output/${{ github.event.inputs.filename }}.pdf

@@ -21,6 +21,7 @@ jobs:
           tlmgr install adjustbox && \
           tlmgr install collectbox && \
           tlmgr install ucs && \
+          tlmgr install lastpage && \
           mkdir -p output && \
           pandoc --template=pandoc-templates/latex-template.tex --metadata-file=metadata.yml --output=output/${{ github.event.inputs.filename }}.pdf ${{ github.event.inputs.filename }}.md
       - name: Upload output

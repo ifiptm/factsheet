@@ -444,6 +444,7 @@ $endif$
 
 
 \usepackage{fancyhdr}
+\usepackage{lastpage}
 \setlength{\headheight}{3em}
 \usepackage{graphicx}
 \usepackage{multirow}
@@ -455,12 +456,14 @@ $endif$
 \renewcommand{\footrulewidth}{0pt}
 \setlength{\headsep}{15mm}
 \setlength{\footskip}{15mm}
+\def\versionstamp{\leavevmode\hbox{\the\year\twodigits\month\twodigits\day}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
 
 \fancyhf{}
 \chead{{\bgroup \def\arraystretch{1.5} \begin{tabular}{| c | c |}\hline \multirow{3}{*}{\includegraphics[width=2cm,valign=c]{images/logo_ifip.png}} & \color[RGB]{1,0,123}{\textbf{International Federation for Information Processing}} \\ \cline{2-2} & \color[RGB]{117,20,12}{\large \textbf{TC-11}} \vspace{-0.5em}\\ & \color[RGB]{117,20,12}{\textbf{Security and Privacy Protection in Information Processing Systems}} \\ \hline\end{tabular} \egroup}}
 \lfoot{\includegraphics[width=2cm,valign=c]{images/logo_ifiptm.png}}
-\cfoot{\footnotesize IFIP WG 11.11 Factsheet, version: v.\the\year\the\month\the\day}
-\rfoot{\footnotesize \thepage}
+\cfoot{\footnotesize IFIP WG 11.11 Factsheet, version: v.\versionstamp}
+\rfoot{\footnotesize \thepage~of~\pageref{LastPage}}
 
 
 

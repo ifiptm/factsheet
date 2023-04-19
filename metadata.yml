@@ -21,7 +21,6 @@ geometry:
 papersize: a4paper
 fontsize: 10
 header-includes:
-  - '\usepackage[none]{hyphenat}'
   - '\setlength{\aboverulesep}{0pt}'
   - '\setlength{\belowrulesep}{0pt}'
   - '\renewcommand{\arraystretch}{1.2}'
